@@ -29,10 +29,11 @@ $ docker run -v ~/Foo:/opt/tlaplus/model -it onosproject/tlaplus-monitor:latest 
 The [TLC Docker image](#docker-image) extends TLC to facilitate conformance monitoring and
 provide cleaner syntax for conformance monitoring specifications. The TLC image supports
 the following additional flags:
-* `-monitor` - Runs TLC in monitoring mode
-* `-source [source]` - Sets the traces source URI (e.g. `kafka://kafka-service:9092/traces`)
-* `-sink [sink]` - Sets the alerts sink URI (e.g. `kafka://kafka-service:9092/alerts`)
-* `-window [duration]` - Sets the duration for sliding windows
+
+- `-monitor` - Runs TLC in monitoring mode
+- `-source [source]` - Sets the traces source URI (e.g. `kafka://kafka-service:9092/traces`)
+- `-sink [sink]` - Sets the alerts sink URI (e.g. `kafka://kafka-service:9092/alerts`)
+- `-window [duration]` - Sets the duration for sliding windows
 
 ```bash
 $ docker run -v ~/Foo:/opt/tlaplus/model -it onosproject/tlaplus-monitor:latest /opt/tlaplus/model/Foo.tla -monitor -source kafka://kafka:9092/traces
@@ -153,6 +154,6 @@ IN KafkaProduce("my-topic", record)
 
 The `KafkaProduce` operator returns `TRUE` for convenient use in predicates.
 
-[Docker]: https://www.docker.com/
-[TLA+]: https://lamport.azurewebsites.net/tla/tla.html
-[Kafka]: https://kafka.apache.org/
+[docker]: https://www.docker.com/
+[tla+]: https://lamport.azurewebsites.net/tla/tla.html
+[kafka]: https://kafka.apache.org/

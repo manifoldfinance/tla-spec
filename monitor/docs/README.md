@@ -57,17 +57,19 @@ monitoring on Kafka streams. The monitor uses [TLA+] specifications to evaluate 
 and invariants specified in the chart configuration can detect safety violations in the trace stream.
 
 Several artifacts are required to by the chart:
-* `model` - the name of the module to evaluate
-* `modules` - an array of TLA+ module files to mount to the monitor pod
-* `spec` - the specification to evaluate
-* `init` - the state initialization predicate (required if `spec` is not configured)
-* `next` - the next state relation (required if `spec` is not configured)
+
+- `model` - the name of the module to evaluate
+- `modules` - an array of TLA+ module files to mount to the monitor pod
+- `spec` - the specification to evaluate
+- `init` - the state initialization predicate (required if `spec` is not configured)
+- `next` - the next state relation (required if `spec` is not configured)
 
 Additional options can be used to specify invariants and other constraints on the model checker:
-* `invariants` - an array of invariants to check for each trace
-* `constants` - a mapping of constant values to assign to the model
-* `constraints` - an array of state constraints
-* `properties` - an array of model properties
+
+- `invariants` - an array of invariants to check for each trace
+- `constants` - a mapping of constant values to assign to the model
+- `constraints` - an array of state constraints
+- `properties` - an array of model properties
 
 ```bash
 $ helm install my-monitor --set modules={Cache.tla,CacheHistory.tla} --set model=Cache.tla --set config.spec=Spec --set config.invariants={TypeOK}
@@ -227,6 +229,6 @@ The model will be initialized with the `prevVersion` and `nextVersion` set to `0
 As traces are pushed onto the traces stream, the model checker will `Read` the trace
 records, update the model state, and evaluate the invariant `TypeOK`.
 
-[TLA+]: https://lamport.azurewebsites.net/tla/tla.html
-[Kafka]: https://kafka.apache.org/
-[Helm]: https://helm.sh/
+[tla+]: https://lamport.azurewebsites.net/tla/tla.html
+[kafka]: https://kafka.apache.org/
+[helm]: https://helm.sh/
