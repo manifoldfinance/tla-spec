@@ -1,12 +1,10 @@
-
-# TLA+ Specification 
+# TLA+ Specification
 
 ## Formal Specification for RPC and Network Services
 
 ### pyTLA
 
 Takes python bytecode and generates TLA+ specs from it. You add your own tests for models to run.
-
 
 #### Install
 
