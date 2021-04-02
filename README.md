@@ -6,13 +6,17 @@
 
 </div>
 
-## Abstract
+
+<br>
+<br>
+
+### abstract
 
 ```js
 // TODO
 ```
 
-## Example Rules 
+## example Rules 
 
 If Condition is false or null, then: <br>
 MTF “passes” validation [by default] for Rule. <br>
@@ -22,26 +26,26 @@ If Statement is null, MTF “passes” validation [by default] for Rule. <br>
 If Statement is false, MTF “fails” validation for Rule. <br>
 
 
-## Overview 
+## overview 
 
 ```js
 // TODO
 ```
 
-## Links
+## links
 
-### Azure CosmosDB
+### azure CosmosDB
 [https://github.com/Azure/azure-cosmos-tla](https://github.com/Azure/azure-cosmos-tla)
 
-### TenCent WeChat PaxosStore
+### tencent WeChat PaxosStore
 [https://github.com/Starydark/PaxosStore-tla](https://github.com/Starydark/PaxosStore-tla)
 
-### Elasticsearch - Formal Models for Elasticsearch algorithms
+### elasticsearch - Formal Models for Elasticsearch algorithms
 
 [https://github.com/elastic/elasticsearch-formal-models](https://github.com/elastic/elasticsearch-formal-models)
 
 
-## Motivations
+## motivations
 
 > a.k.a blame game
 
@@ -49,6 +53,6 @@ If Statement is false, MTF “fails” validation for Rule. <br>
 [https://buildkite.com/blog/outage-post-mortem-for-august-22nd](https://buildkite.com/blog/outage-post-mortem-for-august-22nd)
 
 
-## License 
+## license 
 
 GPL-2.0
