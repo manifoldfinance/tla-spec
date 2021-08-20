@@ -1,0 +1,24 @@
+name: container
+# GitHub Action CI
+
+on:
+  - pull_request
+
+jobs:
+  build:
+    name: "Build"
+
+    runs-on: ubuntu-latest
+
+    env:
+      DOCKER_IMAGE: commoditystream/tla
+
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "Build Docker image"
+        run: $(which docker) build --tag ${DOCKER_IMAGE}:latest .
+
+      - name: "Run Docker image"
+        run: $(which docker) run --interactive --rm --workdir=/app --volume ${GITHUB_WORKSPACE}:/app ${DOCKER_IMAGE}:latest
